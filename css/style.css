@@ -1,0 +1,242 @@
+/*
+*	Clínica Veterinária SOSPet
+*	Projeto de IHC (FATEC-SP)
+*
+*	Angélica Rocha      nº 1420
+*	Carolina Lopes      nº 14211778
+*	Giovanna Zanardo    nº 1420
+*	Jessica Vilela      nº 14201575
+*
+*/
+@charset "UTF-8";
+
+
+/*********************************
+*************PROBLEMAS************
+*************PROBLEMAS************
+
+1. menu não responsivo
+2. profissionais legenda
+3. patas não responsivas
+4. formulário não fica mais largo
+
+
+*************PROBLEMAS************
+*************PROBLEMAS************
+**********************************/
+
+
+/* =====================
+GERAL 
+=======================*/
+
+* {margin: 0; padding: 0; background-color: #f8f8f8;}
+#wrapper {width: 100%;}
+#content {padding: 0;}
+header {}
+hgroup { z-index: 2; top: 120px; left: 36em; text-align: center; font-family: 'Garamound', serif; font-size: 20px;}
+#topo {width: 100%; opacity: 0.9; border-bottom: 2px solid #ccc;}
+#img-top {top: 1em; left:20%; width: 250px; position: fixed; opacity: 0.9; }
+section {top: 500px; width: 100%;}
+article {margin: 0 auto ; }
+article p{width: 70%; margin: 0 auto ;}
+h2.tittle { width: 70%; margin: 0 auto ; color: #104E8B; font-family: 'Calibri', serif; font-size: 28pt; padding: 15px 0 5px 0;}
+p {font-family: 'Arial', sans-serif; line-height: 2em; text-align: justify; font-size: 12pt; color: #666; padding: 2px 0 10px 0;}
+
+#botao-top {
+	background-color: #e3e3e3;
+	padding: 5px 40px;
+	border-style: 1px groove #999;
+	font-family: 'Calibri', serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #405060;
+	box-shadow: 1px 1px 1px #999;
+}
+
+
+/* DEIXAR OS SERVIÇOS UM AO LADO DO OUTRO*/
+#serv { text-align: center; padding: 0 160px 0; margin: 0 auto;}
+.service {display: block; float: left; width: 18%; padding: 1%;}
+.service p {font-size: 14pt; text-align: center; line-height: 90%; font-family: 'Calibri', serif;}
+.servicepaw { width: 60px; float: center;}
+.servicepaw:hover{ opacity: 0.5;}
+
+figure{width: 100%; text-align: center; margin: 0 auto; display: block;}  /*não centraliza*/
+.img-comp {width: 265px; float: center; border: 2px solid #eee;}
+.figure-img { width: 300px; float: left;}
+
+
+
+iframe {width: 100%;}
+footer { background-color: #103050; margin: 0 auto; width: 100%; padding: 4px 0 10px; }
+footer  h6 {  background-color: #103050; font-family: 'Open Sans', sans-serif; text-align: center; color: #fff; font-size: 10pt; line-height: 10px; clear: both; }
+footer  h1 {  background-color: #103050; font-family: 'Open Sans', sans-serif; text-align: center; color: #fff; font-size: 11pt; line-height: 10px; clear: both; }
+#nav-footer { font-family: 'Calibri', serif; font-size: 9pt; color: #444; text-align: center; text-decoration: none;} 
+/* =====================
+MENU 
+=======================*/
+
+.navbar {
+	display: inline-block;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	height: 40px;
+	z-index: 2;
+	background-color: #f8f8f8;
+	padding: 40px 0 20px 0;
+	border-top: 2px solid #104E8B;
+	border-bottom: 1px solid #ccc;
+}
+.navbar ul  { padding: 10px 40px; float: right;}
+
+.navbar ul li {
+	display: inline;
+	padding: 10px 10px;
+}
+
+.navbar ul li a {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: 'Calibri Light', sans-serif;
+	font-size: 14pt;
+	color: #c8c8c8;
+	text-shadow: 2px 2px solid #fff;
+	font-weight: bold;
+	padding: 10px 10px;
+
+}
+
+.navbar ul li a:hover {
+	color: #4682B4;
+}
+
+
+
+/* =====================
+FORMULÁRIO 
+=======================*/
+
+form {width: 100%; text-align:center; margin: 0 auto;}
+input, textarea {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	font-size: 10pt;
+	color: #000;
+	background-color: #fff;
+	margin: 2px;
+	padding: 2px;
+	width: 100%;
+}
+input:hover, textarea:hover {
+	background-color: #fff;
+}
+span.forname { width: 100%; text-align: left; margin: 0 auto;}
+label {
+	font-size: 11pt;
+	font-family: 'Calibri Light', serif;
+	margin: 2px;			
+	font-size: 14pt;
+	width: 100%;
+}
+#botao {
+	background-color: #aabbcc;
+	padding: 5px 10px;
+	border-style: 2px groove #999;
+	font-family: 'Calibri', serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #405060;
+	margin: 0 0 30px 0;
+}
+
+
+/* =====================
+DESIGN RESPONSIVE 
+=======================*/
+/*
+@media only screen and (max-width: 800px){
+	.navbar {
+		margin: 0;
+		clear: both;
+		display: block;
+		width: 100%;
+		list-style-type: none;
+		text-align: center;
+		padding: 50px 0 0 0;
+	}
+	.nav-list {display:none; }
+
+
+	.nav-item {
+		padding: 0.6em;
+		background-color: #efefef;
+		display: block;
+		width: 100%;
+		margin-bottom: 3px;
+		text-shadow: 1px 1px #fff;
+		text-transform: uppercase;
+		float: none;
+	}
+
+	.nav-item a {
+		text-decoration: none;
+	}
+	.nav-item:first-child a {
+		border-radius:5px 0 0;
+	}
+	.nav-item:last-child a {
+		border-radius:0 0 5px 5px;
+	}
+	
+}*/
+
+
+
+
+@media only screen and (max-width: 750px){      /* não pode diminuir as patas, tem que ficar mesmo tamanho*/     
+	#serv { text-align: center; padding: 0 160px 0; margin: 0 auto;}
+	.service {display: inline; clear: both; padding: 1%;}
+	.service p {font-size: 14pt; text-align: center; line-height: 90%; font-family: 'Calibri', serif;}
+	.servicepaw { width: 60px; float: center;}
+	.servicepaw:hover{ opacity: 0.5;}
+	
+	
+	.nav-list {
+        display: none;
+    }
+    
+    .nav-div {
+        z-index: 999999;
+        margin: 0vh;
+        overflow: hidden;
+        background-color: #ffffff;
+        height: 16vh;
+        width: 100vw;
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    .navbar {
+        background-image: url('menu.png');
+        background-repeat: no-repeat;
+        background-size: 5vh auto;
+        height: 10vh;
+        width: 150vh;
+        float: right;
+        margin-top: 6vh;
+        margin-right: 10vw;
+        position: relative;
+        width: 5vw;
+        cursor: pointer;
+    }
+    
+    .navbar:hover {
+        background: #405060;
+        height: 8vh;
+        width: 30vw;
+        margin-right: 10vw;
+        position: relative;
+    }
+}
